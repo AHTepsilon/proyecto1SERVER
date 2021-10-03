@@ -1,6 +1,7 @@
 package model;
 
 import processing.core.PApplet;
+import processing.core.PImage;
 
 public class CharacterMovement 
 {
@@ -23,6 +24,7 @@ public class CharacterMovement
 	
 	int velocidadTerminal, velocidadCaida;
 	
+	PImage  charSprite;
 	
 	PApplet app;
 	
@@ -53,6 +55,8 @@ public class CharacterMovement
 		
 		velocidadY=0;
 		
+		charSprite = app.loadImage("PERSONAJE.png");
+		
 		if(posY == 324) 
 		{
 			colisionAbajo=true;
@@ -63,11 +67,12 @@ public class CharacterMovement
 			colisionAbajo=false;
 		}
 	}
-	
+
 	public void drawPlayer(PApplet app)
 	{
 		app.fill(255, 0, 0);
-		app.square(posX, posY, 30);
+		
+		app.image(charSprite, posX, posY);
 	}
 	
 	public void movement(PApplet app)
@@ -96,10 +101,10 @@ public class CharacterMovement
 				onGroundTemp = true;
 			}*/
 		
-		if(posY > (351-(size/2)))
+		/*if(posY > (351-(size/2)))
 		{
 			posY = (350-(size/2));
-		}
+		}*/
 	}
 	
 	@SuppressWarnings("static-access")
@@ -210,4 +215,20 @@ public class CharacterMovement
 			}
 		}
 	}*/
+	
+	public static float getPosX() {
+		return posX;
+	}
+
+	public static void setPosX(float posX) {
+		CharacterMovement.posX = posX;
+	}
+
+	public static float getPosY() {
+		return posY;
+	}
+
+	public static void setPosY(float posY) {
+		CharacterMovement.posY = posY;
+	}
 }

@@ -64,8 +64,11 @@ public class Principal extends PApplet
 		System.out.println(mouseX + ", " + mouseY);
 
 		stageLoader.showStage(this);
+		stageLoader.stageCollisions(this);
 		charMove.drawPlayer(this);
 		charMove.movement(this);
+		
+		moveStage();
 	}
 	
 	public void initServer()
@@ -103,6 +106,35 @@ public class Principal extends PApplet
 	public void keyPressed()
 	{
 		charMove.keyPress(this);
+	}
+	
+	@SuppressWarnings("static-access")
+	public void moveStage()
+	{
+		if(charMove.getPosX() > 801)
+		{
+			charMove.setPosX(800);
+			stageLoader.xStage -= 5;
+			
+			/*if(stageLoader.xStage > 0)
+			{
+				stageLoader.xStage = 0;
+			}*/
+		}
+		
+		if(charMove.getPosX() < 24)
+		{
+			charMove.setPosX(25);
+			stageLoader.xStage += 5;
+			
+			/*if(stageLoader.xStage < 1152 * 8)
+			{
+				stageLoader.xStage = (1152 * 8)-1;
+			}*/
+		}
+		
+		//System.out.println(charMove.getPosX());
+		//System.out.println(stageLoader.xStage);
 	}
 
 }

@@ -26,5 +26,67 @@ public class Stages
 	public void showStage(PApplet app)
 	{
 		app.image(stage1a, xStage, yStage);
+		app.image(stage1b, xStage + 1152, yStage);
+		app.image(stage1c, xStage + (1152*2), yStage);
+		app.image(stage1d, xStage + (1152*3), yStage);
+		app.image(stage1e, xStage + (1152*4), yStage);
+		app.image(stage1f, xStage + (1152*5), yStage);
+		app.image(stage1g, xStage + (1152*6), yStage);
+	}
+	
+	public void stageCollisions(PApplet app)
+	{
+		float CX = CharacterMovement.posX;
+		float CY = CharacterMovement.posY;
+		
+		if(CharacterMovement.posX > (xStage - 10) && CharacterMovement.posX < (xStage + 76))
+			{
+			if(CharacterMovement.posY > 459-45)
+				{
+					CharacterMovement.posY = 459-45;
+				}
+			}
+		if(CharacterMovement.posX > (xStage + 213) && CharacterMovement.posX < (xStage + 287))
+		{
+			if(CharacterMovement.posY > 577-45)
+			{
+				CharacterMovement.posY = 577-45;
+			}
+		}
+		if(CharacterMovement.posX > (xStage + 287) && CharacterMovement.posX < (xStage + 358))
+		{
+			if(CharacterMovement.posY > 639-45)
+			{
+				CharacterMovement.posY = 639-45;
+			}
+		}
+		if(CharacterMovement.posX > (xStage + 430) && CharacterMovement.posX < (xStage + 502))
+		{
+			if(CharacterMovement.posY > 639-45)
+			{
+				CharacterMovement.posY = 639-45;
+			}
+		}
+		if(CharacterMovement.posX > (xStage + 502) && CharacterMovement.posX < (xStage + 641))
+		{
+			if(CharacterMovement.posY > 577-45)
+			{
+				CharacterMovement.posY = 577-45;
+			}
+		}
+		if(CharacterMovement.posX > (xStage + 641) && CharacterMovement.posX < (xStage + 716))
+		{
+			if(CharacterMovement.posY > 639-45)
+			{
+				CharacterMovement.posY = 639-45;
+			}
+		}
+		if(CharacterMovement.posX > (xStage + 748) && CharacterMovement.posX < (xStage + 826))
+		{
+			if(CharacterMovement.posY > 555-45)
+			{
+				CharacterMovement.posY = 555-45;
+			}
+		}
 	}
 }
