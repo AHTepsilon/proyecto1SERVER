@@ -11,6 +11,7 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 import model.CharacterMovement;
+import model.Stages;
 import processing.core.PApplet;
 
 public class Principal extends PApplet
@@ -24,7 +25,7 @@ public class Principal extends PApplet
 	@Override
 	public void settings() //void Awake
 	{
-		size(500, 500);
+		size(1152, 700);
 	}
 	
 	BufferedReader reader;
@@ -35,6 +36,8 @@ public class Principal extends PApplet
 	InetAddress ipServer;
 	
 	CharacterMovement charMove;
+	
+	Stages stageLoader;
 	
 	@Override
 	public void setup() //void Start
@@ -50,6 +53,7 @@ public class Principal extends PApplet
 		
 		initServer();
 		
+		stageLoader = new Stages(this);
 		charMove = new CharacterMovement(this);
 		}
 	
@@ -57,6 +61,9 @@ public class Principal extends PApplet
 	public void draw() //void Update
 	{		
 		background(255);
+		System.out.println(mouseX + ", " + mouseY);
+
+		stageLoader.showStage(this);
 		charMove.drawPlayer(this);
 		charMove.movement(this);
 	}

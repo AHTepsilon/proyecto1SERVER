@@ -28,8 +28,8 @@ public class CharacterMovement
 	
 	public CharacterMovement(PApplet app)
 	{
-		posX = 132;
-		posY = 224;
+		posX = 31;
+		posY = 406;
 		
 		velocityX = 0;
 		velocityY = 0;
