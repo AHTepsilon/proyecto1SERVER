@@ -61,7 +61,7 @@ public class Principal extends PApplet
 	public void draw() //void Update
 	{		
 		background(255);
-		System.out.println(mouseX + ", " + mouseY);
+		System.out.println(mouseX + ", " + mouseY + ", " + (int)stageLoader.xStage + ", " + (-(int)stageLoader.xStage + mouseX));
 
 		stageLoader.showStage(this);
 		stageLoader.stageCollisions(this);
