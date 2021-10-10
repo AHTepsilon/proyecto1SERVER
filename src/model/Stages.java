@@ -487,6 +487,17 @@ public class Stages
 				CharacterMovement.posY = 616-45;
 			}
 		}
+		
+		if(xStage > 0)
+		{
+			xStage = 0;
+		}
+		
+		
+		if(xStage < -6910)
+		{
+			xStage = -6909;
+		}
 	}
 
 	public static int getxStage() {

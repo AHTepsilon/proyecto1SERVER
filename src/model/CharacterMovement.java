@@ -24,7 +24,7 @@ public class CharacterMovement
 	
 	int velocidadTerminal, velocidadCaida;
 	
-	PImage  charSprite;
+	PImage  charSprite, charSprite2;
 	
 	PApplet app;
 	
@@ -56,6 +56,7 @@ public class CharacterMovement
 		velocidadY=0;
 		
 		charSprite = app.loadImage("PERSONAJE.png");
+		charSprite2 = app.loadImage("PERSONAJE2.png");
 		
 		if(posY == 324) 
 		{
@@ -68,11 +69,19 @@ public class CharacterMovement
 		}
 	}
 
-	public void drawPlayer(PApplet app)
+	public void drawPlayer(PApplet app, int charId)
 	{
 		app.fill(255, 0, 0);
 		
-		app.image(charSprite, posX, posY);
+		switch(charId)
+		{
+		case 0:
+			app.image(charSprite, posX, posY);
+			break;
+		case 1:
+			app.image(charSprite, posX-20, posY-20);
+			break;
+		}
 	}
 	
 	public void movement(PApplet app)

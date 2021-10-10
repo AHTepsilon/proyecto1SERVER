@@ -35,7 +35,9 @@ public class Principal extends PApplet
 	
 	InetAddress ipServer;
 	
-	CharacterMovement charMove;
+	CharacterMovement charMove, charMove2;
+	
+	boolean gameOver;
 	
 	Stages stageLoader;
 	
@@ -55,6 +57,7 @@ public class Principal extends PApplet
 		
 		stageLoader = new Stages(this);
 		charMove = new CharacterMovement(this);
+		charMove2 = new CharacterMovement(this);
 		}
 	
 	@Override
@@ -65,9 +68,10 @@ public class Principal extends PApplet
 
 		stageLoader.showStage(this);
 		stageLoader.stageCollisions(this);
-		charMove.drawPlayer(this);
+		charMove.drawPlayer(this, 0);
 		charMove.movement(this);
 		
+		gameOver();
 		moveStage();
 	}
 	
@@ -135,6 +139,116 @@ public class Principal extends PApplet
 		
 		//System.out.println(charMove.getPosX());
 		//System.out.println(stageLoader.xStage);
+	}
+	
+	
+	@SuppressWarnings("static-access")
+	public void gameOver()
+	{
+		
+		if(charMove.posY > 800)
+		{
+			stageLoader.xStage = 0;
+			charMove.posX = 31+10;
+			charMove.posY = 406;
+		}
+		
+		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 579, 566) < 30)
+		{
+			stageLoader.xStage = 0;
+			charMove.posX = 31+10;
+			charMove.posY = 406;
+		}
+		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 683, 630) < 30)
+		{
+			stageLoader.xStage = 0;
+			charMove.posX = 31+10;
+			charMove.posY = 406;
+		}
+		if(dist(charMove.posX, charMove.posY, stageLoader.xStage +1600, 653) < 10)
+		{
+			stageLoader.xStage = 0;
+			charMove.posX = 31+10;
+			charMove.posY = 406;
+		}
+		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 1662, 593) < 30)
+		{
+			stageLoader.xStage = 0;
+			charMove.posX = 31;
+			charMove.posY = 406;
+		}
+		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 2639, 478) < 40)
+		{
+			stageLoader.xStage = 0;
+			charMove.posX = 31;
+			charMove.posY = 406;
+		}
+		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 2756, 478) < 40)
+		{
+			stageLoader.xStage = 0;
+			charMove.posX = 31;
+			charMove.posY = 406;
+		}
+		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 2915, 644) < 40)
+		{
+			stageLoader.xStage = 0;
+			charMove.posX = 31;
+			charMove.posY = 406;
+		}
+		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 3090, 644) < 40)
+		{
+			stageLoader.xStage = 0;
+			charMove.posX = 31;
+			charMove.posY = 406;
+		}
+		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 4069, 644) < 40)
+		{
+			stageLoader.xStage = 0;
+			charMove.posX = 31;
+			charMove.posY = 406;
+		}
+		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 4287, 555) < 40)
+		{
+			stageLoader.xStage = 0;
+			charMove.posX = 31+10;
+			charMove.posY = 406;
+		}
+		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 5009, 571) < 40)
+		{
+			stageLoader.xStage = 0;
+			charMove.posX = 31+10;
+			charMove.posY = 406;
+		}
+		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 5672, 571) < 40)
+		{
+			stageLoader.xStage = 0;
+			charMove.posX = 31+10;
+			charMove.posY = 406;
+		}
+		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 5939, 639) < 40)
+		{
+			stageLoader.xStage = 0;
+			charMove.posX = 31+10;
+			charMove.posY = 406;
+		}
+		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 6084, 639) < 40)
+		{
+			stageLoader.xStage = 0;
+			charMove.posX = 31+10;
+			charMove.posY = 406;
+		}
+		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 6403, 639) < 40)
+		{
+			stageLoader.xStage = 0;
+			charMove.posX = 31+10;
+			charMove.posY = 406;
+		}
+		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 6703, 571) < 40)
+		{
+			stageLoader.xStage = 0;
+			charMove.posX = 31+10;
+			charMove.posY = 406;
+		}
 	}
 
 }
