@@ -58,14 +58,17 @@ public class Principal extends PApplet
 		stageLoader = new Stages(this);
 		charMove = new CharacterMovement(this);
 		charMove2 = new CharacterMovement(this);
+		
+		stageLoader.stageNum = 0;
 		}
 	
 	@Override
 	public void draw() //void Update
 	{		
 		background(255);
-		System.out.println(mouseX + ", " + mouseY + ", " + (int)stageLoader.xStage + ", " + (-(int)stageLoader.xStage + mouseX));
-
+		//System.out.println(mouseX + ", " + mouseY + ", " + (int)stageLoader.xStage + ", " + (-(int)stageLoader.xStage + mouseX));
+		System.out.println(charMove.getVelocityY());
+		
 		stageLoader.showStage(this);
 		stageLoader.stageCollisions(this);
 		charMove.drawPlayer(this, 0);
@@ -105,6 +108,37 @@ public class Principal extends PApplet
 	public void keyReleased()
 	{
 		charMove.keyMovement(this);
+		
+		if(key == '0')
+		{
+			stageLoader.stageNum = 0;
+		}
+		
+		if(key == '1')
+		{
+			stageLoader.stageNum = 1;
+		}
+		
+		if(key == '2')
+		{
+			stageLoader.stageNum = 2;
+		}
+		
+		if(key == '3')
+		{
+			stageLoader.stageNum = 3;
+		}
+		
+		if(key == '4')
+		{
+			stageLoader.stageNum = 4;
+		}
+		
+		if(key == '5')
+		{
+			stageLoader.stageNum = 5;
+		}
+		
 	}
 	
 	public void keyPressed()
@@ -250,5 +284,7 @@ public class Principal extends PApplet
 			charMove.posY = 406;
 		}
 	}
+	
+	
 
 }

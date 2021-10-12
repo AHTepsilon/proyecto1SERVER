@@ -5,9 +5,11 @@ import processing.core.PImage;
 
 public class Stages 
 {
-	PImage stage1a, stage1b, stage1c, stage1d, stage1e, stage1f, stage1g;
+	PImage stage1a, stage1b, stage1c, stage1d, stage1e, stage1f, stage1g, startScreen, insScreen, insScreen2, connectScreen;
 	
 	public static int xStage, yStage;
+	
+	public static int stageNum;
 	
 	public Stages(PApplet app)
 	{
@@ -19,19 +21,45 @@ public class Stages
 		stage1f = app.loadImage("water6.png");
 		stage1g = app.loadImage("water7.png");
 		
+		startScreen = app.loadImage("startScreen.png");
+		insScreen = app.loadImage("instructionsOne.png");
+		insScreen2 = app.loadImage("instructionsTwo.png");
+		connectScreen = app.loadImage("connectScreen.png");
+		
 		xStage = 0;
 		yStage = 0;
 	}
 	
 	public void showStage(PApplet app)
 	{
-		app.image(stage1a, xStage, yStage);
-		app.image(stage1b, xStage + 1152, yStage);
-		app.image(stage1c, xStage + (1152*2), yStage);
-		app.image(stage1d, xStage + (1152*3), yStage);
-		app.image(stage1e, xStage + (1152*4), yStage);
-		app.image(stage1f, xStage + (1152*5), yStage);
-		app.image(stage1g, xStage + (1152*6), yStage);
+		
+		switch (stageNum)
+		{
+		case 0:
+			app.image(startScreen, xStage, yStage);
+			break;
+		case 1:
+			app.image(insScreen, xStage, yStage);
+			break;
+		case 2:
+			app.image(insScreen2, xStage, yStage);
+			break;
+		case 3:
+			app.image(connectScreen, xStage, yStage);
+			break;
+		case 4:
+			app.image(stage1a, xStage, yStage);
+			app.image(stage1b, xStage + 1152, yStage);
+			app.image(stage1c, xStage + (1152*2), yStage);
+			app.image(stage1d, xStage + (1152*3), yStage);
+			app.image(stage1e, xStage + (1152*4), yStage);
+			app.image(stage1f, xStage + (1152*5), yStage);
+			app.image(stage1g, xStage + (1152*6), yStage);
+			break;
+		case 5:
+			
+			break;
+		}
 	}
 	
 	public void stageCollisions(PApplet app)

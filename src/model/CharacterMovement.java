@@ -90,9 +90,9 @@ public class CharacterMovement
 		
 		velocityY += gravity;
 		
-		if(velocityY > 100)
+		if(velocityY > 60)
 		{
-			velocityY = 99;
+			velocityY = 59;
 		}
 		
 		velocityX = (rightKey - leftKey) * speed;
@@ -240,4 +240,30 @@ public class CharacterMovement
 	public static void setPosY(float posY) {
 		CharacterMovement.posY = posY;
 	}
+
+	public float getVelocityY() {
+		return velocityY;
+	}
+
+	public void setVelocityY(float velocityY) {
+		this.velocityY = velocityY;
+	}
+
+	public int getVelocidadY() {
+		return velocidadY;
+	}
+
+	public void setVelocidadY(int velocidadY) {
+		this.velocidadY = velocidadY;
+	}
+
+	public int getVelocidadCaida() {
+		return velocidadCaida;
+	}
+
+	public void setVelocidadCaida(int velocidadCaida) {
+		this.velocidadCaida = velocidadCaida;
+	}
+	
+	
 }
