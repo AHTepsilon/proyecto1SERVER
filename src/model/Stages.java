@@ -28,6 +28,11 @@ public class Stages
 		
 		xStage = 0;
 		yStage = 0;
+		
+		startScreen.resize(1152, 700);
+		insScreen.resize(1152, 700);
+		insScreen2.resize(1152, 700);
+		connectScreen.resize(1152, 700);
 	}
 	
 	public void showStage(PApplet app)
