@@ -111,8 +111,7 @@ public class CharacterMovement2
 	@SuppressWarnings("static-access")
 	public void keyMovement(PApplet app) //goes in keyReleased
 	{
-		if(app.key == app.CODED)
-		{
+
 			if(app.key == 'a' || app.key == 'A')
 			{
 				leftKey = 0;
@@ -132,7 +131,7 @@ public class CharacterMovement2
 			{
 				upKey = 0;
 			}
-		}
+	
 	}
 	
 	@SuppressWarnings("static-access")
@@ -142,9 +141,6 @@ public class CharacterMovement2
 		{
 			velocityY = jumpVel;
 		}
-		
-		if(app.key == app.CODED)
-		{
 			if(app.key == 'a' || app.key == 'A')
 			{
 				leftKey = 1;
@@ -203,7 +199,6 @@ public class CharacterMovement2
 			{
 				downKey = 1;
 			}*/
-		}
 	}
 	
 	/*public void keyPress(PApplet app) //goes in keyPressed

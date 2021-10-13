@@ -82,6 +82,7 @@ public class Principal extends PApplet
 		charMove2.drawPlayer(this, 0);
 		charMove2.movement(this);
 
+		positions();
 		
 		gameOver();
 		moveStage();
@@ -209,6 +210,30 @@ public class Principal extends PApplet
 		//System.out.println(stageLoader.xStage);
 	}
 	
+	public void positions()
+	{
+		if(charMove.posX > charMove2.posX)
+		{
+			textSize(40);
+			
+			fill(255, 128, 0);
+			text("2", 1121, 40);
+			
+			fill(255, 247, 0);
+			text("1", 1121, 40+350);
+		}
+		
+		else if(charMove2.posX > charMove.posX)
+		{
+			textSize(40);
+			
+			fill(255, 247, 0);
+			text("1", 1121, 40);
+			
+			fill(255, 128, 0);
+			text("2", 1121, 40+350);
+		}
+	}
 	
 	@SuppressWarnings("static-access")
 	public void gameOver()
@@ -320,106 +345,106 @@ public class Principal extends PApplet
 		
 		//------------------------------------------------------------------------------------------------------------------------------------
 		
-		if(charMove2.posY > 800)
+		if(charMove2.posY > 800 - 350)
 		{
-			stageLoader.xStage = 0;
+			stageLoader.xStage2 = 0;
 			charMove2.posX = 31+10;
 			charMove2.posY = 406-350;
 		}
 		
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 579, 566) < 30)
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 579, 566-350) < 30)
 		{
-			stageLoader.xStage = 0;
+			stageLoader.xStage2 = 0;
 			charMove2.posX = 31+10;
 			charMove2.posY = 406-350;
 		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 683, 630) < 30)
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 683, 630-350) < 30)
 		{
-			stageLoader.xStage = 0;
+			stageLoader.xStage2 = 0;
 			charMove2.posX = 31+10;
 			charMove2.posY = 406-350;
 		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage +1600, 653) < 10)
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 +1600, 653-350) < 10)
 		{
-			stageLoader.xStage = 0;
+			stageLoader.xStage2 = 0;
 			charMove2.posX = 31+10;
 			charMove2.posY = 406-350;
 		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 1662, 593) < 30)
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 1662, 593-350) < 30)
 		{
-			stageLoader.xStage = 0;
+			stageLoader.xStage2 = 0;
 			charMove2.posX = 31;
 			charMove2.posY = 406-350;
 		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 2639, 478) < 40)
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 2639, 478-350) < 40)
 		{
-			stageLoader.xStage = 0;
+			stageLoader.xStage2 = 0;
 			charMove2.posX = 31;
 			charMove2.posY = 406-350;
 		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 2756, 478) < 40)
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 2756, 478-350) < 40)
 		{
-			stageLoader.xStage = 0;
+			stageLoader.xStage2 = 0;
 			charMove2.posX = 31;
 			charMove2.posY = 406-350;
 		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 2915, 644) < 40)
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 2915, 644-350) < 40)
 		{
-			stageLoader.xStage = 0;
+			stageLoader.xStage2 = 0;
 			charMove2.posX = 31;
 			charMove2.posY = 406-350;
 		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 3090, 644) < 40)
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 3090, 644-350) < 40)
 		{
-			stageLoader.xStage = 0;
+			stageLoader.xStage2 = 0;
 			charMove2.posX = 31;
 			charMove2.posY = 406-350;
 		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 4069, 644) < 40)
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 4069, 644-350) < 40)
 		{
-			stageLoader.xStage = 0;
+			stageLoader.xStage2 = 0;
 			charMove2.posX = 31;
 			charMove2.posY = 406-350;
 		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 4287, 555) < 40)
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 4287, 555-350) < 40)
 		{
-			stageLoader.xStage = 0;
+			stageLoader.xStage2 = 0;
 			charMove2.posX = 31+10;
 			charMove2.posY = 406-350;
 		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 5009, 571) < 40)
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 5009, 571-350) < 40)
 		{
-			stageLoader.xStage = 0;
+			stageLoader.xStage2 = 0;
 			charMove2.posX = 31+10;
 			charMove2.posY = 406-350;
 		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 5672, 571) < 40)
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 5672, 571-350) < 40)
 		{
-			stageLoader.xStage = 0;
+			stageLoader.xStage2 = 0;
 			charMove2.posX = 31+10;
 			charMove2.posY = 406-350;
 		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 5939, 639) < 40)
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 5939, 639-350) < 40)
 		{
-			stageLoader.xStage = 0;
+			stageLoader.xStage2 = 0;
 			charMove2.posX = 31+10;
 			charMove2.posY = 406-350;
 		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 6084, 639) < 40)
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 6084, 639-350) < 40)
 		{
-			stageLoader.xStage = 0;
+			stageLoader.xStage2 = 0;
 			charMove2.posX = 31+10;
 			charMove2.posY = 406-350;
 		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 6403, 639) < 40)
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 6403, 639-350) < 40)
 		{
-			stageLoader.xStage = 0;
+			stageLoader.xStage2 = 0;
 			charMove2.posX = 31+10;
 			charMove2.posY = 406-350;
 		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 6703, 571) < 40)
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 6703, 571-350) < 40)
 		{
-			stageLoader.xStage = 0;
+			stageLoader.xStage2 = 0;
 			charMove2.posX = 31+10;
 			charMove2.posY = 406-350;
 		}

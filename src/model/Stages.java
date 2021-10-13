@@ -22,13 +22,13 @@ public class Stages
 		stage1f = app.loadImage("water6.png");
 		stage1g = app.loadImage("water7.png");
 		
-		stage1ap2 = app.loadImage("water1.png");
-		stage1bp2 = app.loadImage("water2.png");
-		stage1cp2 = app.loadImage("water3.png");
-		stage1dp2 = app.loadImage("water4.png");
-		stage1ep2 = app.loadImage("water5.png");
-		stage1fp2 = app.loadImage("water6.png");
-		stage1gp2 = app.loadImage("water7.png");
+		stage1ap2 = app.loadImage("fire1.png");
+		stage1bp2 = app.loadImage("fire2.png");
+		stage1cp2 = app.loadImage("fire3.png");
+		stage1dp2 = app.loadImage("fire4.png");
+		stage1ep2 = app.loadImage("fire5.png");
+		stage1fp2 = app.loadImage("fire6.png");
+		stage1gp2 = app.loadImage("fire7.png");
 		
 		startScreen = app.loadImage("startScreen.png");
 		insScreen = app.loadImage("instructionsOne.png");
@@ -1009,6 +1009,17 @@ public class Stages
 		{
 			CharacterMovement2.posY = 616-45-350;
 		}
+	}
+	
+	if(xStage2 > 0)
+	{
+		xStage2 = 0;
+	}
+	
+	
+	if(xStage2 < -6910)
+	{
+		xStage2 = -6909;
 	}
 	}
 
