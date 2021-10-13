@@ -113,22 +113,22 @@ public class CharacterMovement2
 	{
 		if(app.key == app.CODED)
 		{
-			if(app.keyCode == app.LEFT)
+			if(app.key == 'a' || app.key == 'A')
 			{
 				leftKey = 0;
 			}
 			
-			if(app.keyCode == app.RIGHT)
+			if(app.key == 'd' || app.key == 'D')
 			{
 				rightKey = 0;
 			}
 			
-			if(app.keyCode == app.DOWN)
+			if(app.key == 's' || app.key == 'S')
 			{
 				downKey = 0;
 			}
 			
-			if(app.keyCode == app.UP)
+			if(app.key == 'w' || app.key == 'W')
 			{
 				upKey = 0;
 			}
@@ -145,17 +145,17 @@ public class CharacterMovement2
 		
 		if(app.key == app.CODED)
 		{
-			if(app.keyCode == app.LEFT)
+			if(app.key == 'a' || app.key == 'A')
 			{
 				leftKey = 1;
 			}
 			
-			if(app.keyCode == app.RIGHT)
+			if(app.key == 'd' || app.key == 'D')
 			{
 				rightKey = 1;
 			}
 			
-			if(app.keyCode == app.UP && velocityY > 20)
+			if((app.key == 'w' || app.key == 'W') && velocityY > 20)
 			{
 				velocityY = -25;
 			}

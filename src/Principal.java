@@ -73,11 +73,15 @@ public class Principal extends PApplet
 		
 		stageLoader.showStage(this);
 		stageLoader.stageCollisions(this);
+
 		charMove.drawPlayer(this, 0);
 		charMove.movement(this);
+		
 		stageLoader.showStagePlayer2(this);
+		
 		charMove2.drawPlayer(this, 0);
 		charMove2.movement(this);
+
 		
 		gameOver();
 		moveStage();
@@ -114,6 +118,7 @@ public class Principal extends PApplet
 	public void keyReleased()
 	{
 		charMove.keyMovement(this);
+		charMove2.keyMovement(this);
 		
 		if(key == '0')
 		{
@@ -181,7 +186,7 @@ public class Principal extends PApplet
 		if(charMove2.getPosX() > 801)
 		{
 			charMove2.setPosX(800);
-			stageLoader.xStage -= 5;
+			stageLoader.xStage2 -= 5;
 			
 			/*if(stageLoader.xStage > 0)
 			{
@@ -192,7 +197,7 @@ public class Principal extends PApplet
 		if(charMove2.getPosX() < 24)
 		{
 			charMove2.setPosX(25);
-			stageLoader.xStage += 5;
+			stageLoader.xStage2 += 5;
 			
 			/*if(stageLoader.xStage < 1152 * 8)
 			{
