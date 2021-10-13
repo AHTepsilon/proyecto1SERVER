@@ -90,9 +90,9 @@ public class CharacterMovement
 		
 		velocityY += gravity;
 		
-		if(velocityY > 60)
+		if(velocityY > 100)
 		{
-			velocityY = 59;
+			velocityY = 99;
 		}
 		
 		velocityX = (rightKey - leftKey) * speed;

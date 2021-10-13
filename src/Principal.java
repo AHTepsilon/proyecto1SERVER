@@ -212,7 +212,7 @@ public class Principal extends PApplet
 	
 	public void positions()
 	{
-		if(charMove.posX > charMove2.posX)
+		if(charMove.posX + -stageLoader.xStage > charMove2.posX + -stageLoader.xStage2)
 		{
 			textSize(40);
 			
@@ -223,7 +223,7 @@ public class Principal extends PApplet
 			text("1", 1121, 40+350);
 		}
 		
-		else if(charMove2.posX > charMove.posX)
+		else if(charMove2.posX + -stageLoader.xStage2 > charMove.posX + -stageLoader.xStage)
 		{
 			textSize(40);
 			
