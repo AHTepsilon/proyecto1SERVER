@@ -11,6 +11,7 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 import model.CharacterMovement;
+import model.CharacterMovement2;
 import model.Stages;
 import processing.core.PApplet;
 
@@ -35,7 +36,8 @@ public class Principal extends PApplet
 	
 	InetAddress ipServer;
 	
-	CharacterMovement charMove, charMove2;
+	CharacterMovement charMove;
+	CharacterMovement2 charMove2;
 	
 	boolean gameOver;
 	
@@ -57,7 +59,7 @@ public class Principal extends PApplet
 		
 		stageLoader = new Stages(this);
 		charMove = new CharacterMovement(this);
-		charMove2 = new CharacterMovement(this);
+		charMove2 = new CharacterMovement2(this);
 		
 		stageLoader.stageNum = 0;
 		}
@@ -66,14 +68,16 @@ public class Principal extends PApplet
 	public void draw() //void Update
 	{		
 		background(255);
-		//System.out.println(mouseX + ", " + mouseY + ", " + (int)stageLoader.xStage + ", " + (-(int)stageLoader.xStage + mouseX));
-		System.out.println(charMove.getVelocityY());
+		System.out.println(mouseX + ", " + mouseY + ", " + (int)stageLoader.xStage + ", " + (-(int)stageLoader.xStage + mouseX));
+		//System.out.println(charMove.getVelocityY());
 		
 		stageLoader.showStage(this);
 		stageLoader.stageCollisions(this);
 		charMove.drawPlayer(this, 0);
 		charMove.movement(this);
 		stageLoader.showStagePlayer2(this);
+		charMove2.drawPlayer(this, 0);
+		charMove2.movement(this);
 		
 		gameOver();
 		moveStage();
@@ -106,6 +110,7 @@ public class Principal extends PApplet
 				}).start();
 	}
 	
+	@SuppressWarnings("static-access")
 	public void keyReleased()
 	{
 		charMove.keyMovement(this);
@@ -145,6 +150,7 @@ public class Principal extends PApplet
 	public void keyPressed()
 	{
 		charMove.keyPress(this);
+		charMove2.keyPress(this);
 	}
 	
 	@SuppressWarnings("static-access")
@@ -164,6 +170,28 @@ public class Principal extends PApplet
 		if(charMove.getPosX() < 24)
 		{
 			charMove.setPosX(25);
+			stageLoader.xStage += 5;
+			
+			/*if(stageLoader.xStage < 1152 * 8)
+			{
+				stageLoader.xStage = (1152 * 8)-1;
+			}*/
+		}
+		
+		if(charMove2.getPosX() > 801)
+		{
+			charMove2.setPosX(800);
+			stageLoader.xStage -= 5;
+			
+			/*if(stageLoader.xStage > 0)
+			{
+				stageLoader.xStage = 0;
+			}*/
+		}
+		
+		if(charMove2.getPosX() < 24)
+		{
+			charMove2.setPosX(25);
 			stageLoader.xStage += 5;
 			
 			/*if(stageLoader.xStage < 1152 * 8)
@@ -284,6 +312,113 @@ public class Principal extends PApplet
 			charMove.posX = 31+10;
 			charMove.posY = 406;
 		}
+		
+		//------------------------------------------------------------------------------------------------------------------------------------
+		
+		if(charMove2.posY > 800)
+		{
+			stageLoader.xStage = 0;
+			charMove2.posX = 31+10;
+			charMove2.posY = 406-350;
+		}
+		
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 579, 566) < 30)
+		{
+			stageLoader.xStage = 0;
+			charMove2.posX = 31+10;
+			charMove2.posY = 406-350;
+		}
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 683, 630) < 30)
+		{
+			stageLoader.xStage = 0;
+			charMove2.posX = 31+10;
+			charMove2.posY = 406-350;
+		}
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage +1600, 653) < 10)
+		{
+			stageLoader.xStage = 0;
+			charMove2.posX = 31+10;
+			charMove2.posY = 406-350;
+		}
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 1662, 593) < 30)
+		{
+			stageLoader.xStage = 0;
+			charMove2.posX = 31;
+			charMove2.posY = 406-350;
+		}
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 2639, 478) < 40)
+		{
+			stageLoader.xStage = 0;
+			charMove2.posX = 31;
+			charMove2.posY = 406-350;
+		}
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 2756, 478) < 40)
+		{
+			stageLoader.xStage = 0;
+			charMove2.posX = 31;
+			charMove2.posY = 406-350;
+		}
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 2915, 644) < 40)
+		{
+			stageLoader.xStage = 0;
+			charMove2.posX = 31;
+			charMove2.posY = 406-350;
+		}
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 3090, 644) < 40)
+		{
+			stageLoader.xStage = 0;
+			charMove2.posX = 31;
+			charMove2.posY = 406-350;
+		}
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 4069, 644) < 40)
+		{
+			stageLoader.xStage = 0;
+			charMove2.posX = 31;
+			charMove2.posY = 406-350;
+		}
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 4287, 555) < 40)
+		{
+			stageLoader.xStage = 0;
+			charMove2.posX = 31+10;
+			charMove2.posY = 406-350;
+		}
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 5009, 571) < 40)
+		{
+			stageLoader.xStage = 0;
+			charMove2.posX = 31+10;
+			charMove2.posY = 406-350;
+		}
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 5672, 571) < 40)
+		{
+			stageLoader.xStage = 0;
+			charMove2.posX = 31+10;
+			charMove2.posY = 406-350;
+		}
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 5939, 639) < 40)
+		{
+			stageLoader.xStage = 0;
+			charMove2.posX = 31+10;
+			charMove2.posY = 406-350;
+		}
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 6084, 639) < 40)
+		{
+			stageLoader.xStage = 0;
+			charMove2.posX = 31+10;
+			charMove2.posY = 406-350;
+		}
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 6403, 639) < 40)
+		{
+			stageLoader.xStage = 0;
+			charMove2.posX = 31+10;
+			charMove2.posY = 406-350;
+		}
+		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage + 6703, 571) < 40)
+		{
+			stageLoader.xStage = 0;
+			charMove2.posX = 31+10;
+			charMove2.posY = 406-350;
+		}
+		
 	}
 	
 	

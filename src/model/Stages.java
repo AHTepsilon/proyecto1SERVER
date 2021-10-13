@@ -556,6 +556,457 @@ public class Stages
 		{
 			xStage = -6909;
 		}
+		
+		//------------------------------------------------------------------------------------------------------------------------------------
+		
+		if(CharacterMovement2.posX > (xStage - 20) && CharacterMovement2.posX < (xStage + 76))
+		{
+		if(CharacterMovement2.posY > 459-45-350)
+			{
+				CharacterMovement2.posY = 459-45-350;
+			}
+		}
+	if(CharacterMovement2.posX > (xStage + 203) && CharacterMovement2.posX < (xStage + 287))
+	{
+		if(CharacterMovement2.posY > 577-45-350)
+		{
+			CharacterMovement2.posY = 577-45-350;
+		}
+	}
+	if(CharacterMovement2.posX > (xStage + 277) && CharacterMovement2.posX < (xStage + 358))
+	{
+		if(CharacterMovement2.posY > 639-45)
+		{
+			CharacterMovement2.posY = 639-45;
+		}
+	}
+	if(CharacterMovement2.posX > (xStage + 420) && CharacterMovement2.posX < (xStage + 502))
+	{
+		if(CharacterMovement2.posY > 639-45)
+		{
+			CharacterMovement2.posY = 639-45;
+		}
+	}
+	if(CharacterMovement2.posX > (xStage + 492) && CharacterMovement2.posX < (xStage + 641))
+	{
+		if(CharacterMovement2.posY > 577-45)
+		{
+			CharacterMovement2.posY = 577-45;
+		}
+	}
+	if(CharacterMovement2.posX > (xStage + 631) && CharacterMovement2.posX < (xStage + 716))
+	{
+		if(CharacterMovement2.posY > 639-45)
+		{
+			CharacterMovement2.posY = 639-45;
+		}
+	}
+	if(CharacterMovement2.posX > (xStage + 738) && CharacterMovement2.posX < (xStage + 826))
+	{
+		if(CharacterMovement2.posY > 555-45-350)
+		{
+			CharacterMovement2.posY = 555-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 848) && CharacterMovement2.posX < (xStage + 940))
+	{
+		if(CharacterMovement2.posY > 555-45-350)
+		{
+			CharacterMovement2.posY = 555-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 995) && CharacterMovement2.posX < (xStage + 1086))
+	{
+		if(CharacterMovement2.posY > 555-45-350)
+		{
+			CharacterMovement2.posY = 555-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 1086) && CharacterMovement2.posX < (xStage + 1295))
+	{
+		if(CharacterMovement2.posY > 624-45-350)
+		{
+			CharacterMovement2.posY = 624-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 1086) && CharacterMovement2.posX < (xStage + 1295))
+	{
+		if(CharacterMovement2.posY > 624-45-350)
+		{
+			CharacterMovement2.posY = 624-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 1295) && CharacterMovement2.posX < (xStage + 1371))
+	{
+		if(CharacterMovement2.posY > 577-45-350)
+		{
+			CharacterMovement2.posY = 577-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 1392) && CharacterMovement2.posX < (xStage + 1497))
+	{
+		if(CharacterMovement2.posY > 535-45-350)
+		{
+			CharacterMovement2.posY = 535-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 1501) && CharacterMovement2.posX < (xStage + 1570))
+	{
+		if(CharacterMovement2.posY > 577-45-350)
+		{
+			CharacterMovement2.posY = 577-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 1693) && CharacterMovement2.posX < (xStage + 1752))
+	{
+		if(CharacterMovement2.posY > 639-45-350)
+		{
+			CharacterMovement2.posY = 639-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 1752) && CharacterMovement2.posX < (xStage + 1813))
+	{
+		if(CharacterMovement2.posY > 577-45-350)
+		{
+			CharacterMovement2.posY = 577-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 1813) && CharacterMovement2.posX < (xStage + 1873))
+	{
+		if(CharacterMovement2.posY > 639-45-350)
+		{
+			CharacterMovement2.posY = 639-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 1850) && CharacterMovement2.posX < (xStage + 2039))
+	{
+		if(CharacterMovement2.posY > 515-45-350)
+		{
+			CharacterMovement2.posY = 515-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 2008) && CharacterMovement2.posX < (xStage + 2159))
+	{
+		if(CharacterMovement2.posY > 639-45-350)
+		{
+			CharacterMovement2.posY = 639-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 2159) && CharacterMovement2.posX < (xStage + 2229))
+	{
+		if(CharacterMovement2.posY > 577-45-350)
+		{
+			CharacterMovement2.posY = 577-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 2229) && CharacterMovement2.posX < (xStage + 2380))
+	{
+		if(CharacterMovement2.posY > 455-45-350)
+		{
+			CharacterMovement2.posY = 455-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 2408) && CharacterMovement2.posX < (xStage + 2500))
+	{
+		if(CharacterMovement2.posY > 515-45-350)
+		{
+			CharacterMovement2.posY = 515-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 2517) && CharacterMovement2.posX < (xStage + 2852))
+	{
+		if(CharacterMovement2.posY > 462-45-350)
+		{
+			CharacterMovement2.posY = 462-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 2948) && CharacterMovement2.posX < (xStage + 3024))
+	{
+		if(CharacterMovement2.posY > 577-45-350)
+		{
+			CharacterMovement2.posY = 577-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 3108) && CharacterMovement2.posX < (xStage + 3200))
+	{
+		if(CharacterMovement2.posY > 535-45-350)
+		{
+			CharacterMovement2.posY = 535-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 3229) && CharacterMovement2.posX < (xStage + 3318))
+	{
+		if(CharacterMovement2.posY > 492-45-350)
+		{
+			CharacterMovement2.posY = 492-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 3337) && CharacterMovement2.posX < (xStage + 3557))
+	{
+		if(CharacterMovement2.posY > 492-45-350)
+		{
+			CharacterMovement2.posY = 492-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 3594) && CharacterMovement2.posX < (xStage + 3673))
+	{
+		if(CharacterMovement2.posY > 455-45-350)
+		{
+			CharacterMovement2.posY = 455-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 3673) && CharacterMovement2.posX < (xStage + 3743))
+	{
+		if(CharacterMovement2.posY > 577-45-350)
+		{
+			CharacterMovement2.posY = 577-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 3743) && CharacterMovement2.posX < (xStage + 3891))
+	{
+		if(CharacterMovement2.posY > 639-45-350)
+		{
+			CharacterMovement2.posY = 639-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 3950) && CharacterMovement2.posX < (xStage + 4035))
+	{
+		if(CharacterMovement2.posY > 577-45-350)
+		{
+			CharacterMovement2.posY = 577-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 4135) && CharacterMovement2.posX < (xStage + 4225))
+	{
+		if(CharacterMovement2.posY > 527-45-350)
+		{
+			CharacterMovement2.posY = 527-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 4340) && CharacterMovement2.posX < (xStage + 4434))
+	{
+		if(CharacterMovement2.posY > 492-45-350)
+		{
+			CharacterMovement2.posY = 492-45-350;
+		}
+	}
+	if(CharacterMovement2.posX > (xStage + 4457) && CharacterMovement2.posX < (xStage + 4540))
+	{
+		if(CharacterMovement2.posY > 462-45-350)
+		{
+			CharacterMovement2.posY = 462-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 4540) && CharacterMovement2.posX < (xStage + 4752))
+	{
+		if(CharacterMovement2.posY > 555-45-350)
+		{
+			CharacterMovement2.posY = 555-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 4812) && CharacterMovement2.posX < (xStage + 4896))
+	{
+		if(CharacterMovement2.posY > 639-45)
+		{
+			CharacterMovement2.posY = 639-45;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 4896) && CharacterMovement2.posX < (xStage + 5115))
+	{
+		if(CharacterMovement2.posY > 569-45)
+		{
+			CharacterMovement2.posY = 569-45;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 5137) && CharacterMovement2.posX < (xStage + 5234))
+	{
+		if(CharacterMovement2.posY > 515-45)
+		{
+			CharacterMovement2.posY = 515-45;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 5246) && CharacterMovement2.posX < (xStage + 5330))
+	{
+		if(CharacterMovement2.posY > 455-45-350)
+		{
+			CharacterMovement2.posY = 455-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 5330) && CharacterMovement2.posX < (xStage + 5403))
+	{
+		if(CharacterMovement2.posY > 575-45-350)
+		{
+			CharacterMovement2.posY = 575-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 5403) && CharacterMovement2.posX < (xStage + 5549))
+	{
+		if(CharacterMovement2.posY > 639-45-350)
+		{
+			CharacterMovement2.posY = 639-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 5545) && CharacterMovement2.posX < (xStage + 5883))
+	{
+		if(CharacterMovement2.posY > 569-45-350)
+		{
+			CharacterMovement2.posY = 569-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 5969) && CharacterMovement2.posX < (xStage + 6052))
+	{
+		if(CharacterMovement2.posY > 575-45-350)
+		{
+			CharacterMovement2.posY = 575-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 6116) && CharacterMovement2.posX < (xStage + 6212))
+	{
+		if(CharacterMovement2.posY > 505-45-350)
+		{
+			CharacterMovement2.posY = 505-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 6235) && CharacterMovement2.posX < (xStage + 6332))
+	{
+		if(CharacterMovement2.posY > 450-45-350)
+		{
+			CharacterMovement2.posY = 450-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 6305) && CharacterMovement2.posX < (xStage + 6376))
+	{
+		if(CharacterMovement2.posY > 575-45-350)
+		{
+			CharacterMovement2.posY = 575-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 6427) && CharacterMovement2.posX < (xStage + 6493))
+	{
+		if(CharacterMovement2.posY > 515-45-350)
+		{
+			CharacterMovement2.posY = 515-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 6493) && CharacterMovement2.posX < (xStage + 6554))
+	{
+		if(CharacterMovement2.posY > 633-45-350)
+		{
+			CharacterMovement2.posY = 633-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 6582) && CharacterMovement2.posX < (xStage + 6987))
+	{
+		if(CharacterMovement2.posY > 564-45-350)
+		{
+			CharacterMovement2.posY = 564-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 7119) && CharacterMovement2.posX < (xStage + 7202))
+	{
+		if(CharacterMovement2.posY > 575-45-350)
+		{
+			CharacterMovement2.posY = 575-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 7202) && CharacterMovement2.posX < (xStage + 7275))
+	{
+		if(CharacterMovement2.posY >639-45-350)
+		{
+			CharacterMovement2.posY = 639-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 7339) && CharacterMovement2.posX < (xStage + 7416))
+	{
+		if(CharacterMovement2.posY > 639-45-350)
+		{
+			CharacterMovement2.posY = 639-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 7416) && CharacterMovement2.posX < (xStage + 7485))
+	{
+		if(CharacterMovement2.posY > 575-45-350)
+		{
+			CharacterMovement2.posY = 575-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 7485) && CharacterMovement2.posX < (xStage + 7562))
+	{
+		if(CharacterMovement2.posY > 520-45-350)
+		{
+			CharacterMovement2.posY = 520-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 7654) && CharacterMovement2.posX < (xStage + 7742))
+	{
+		if(CharacterMovement2.posY > 568-45-350)
+		{
+			CharacterMovement2.posY = 568-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 7769) && CharacterMovement2.posX < (xStage + 7853))
+	{
+		if(CharacterMovement2.posY > 550-45-350)
+		{
+			CharacterMovement2.posY = 550-45-350;
+		}
+	}
+	
+	if(CharacterMovement2.posX > (xStage + 7986) && CharacterMovement2.posX < (xStage + 8071))
+	{
+		if(CharacterMovement2.posY > 616-45-350)
+		{
+			CharacterMovement2.posY = 616-45-350;
+		}
+	}
 	}
 
 	public static int getxStage() {
