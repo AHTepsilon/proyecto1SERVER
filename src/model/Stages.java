@@ -6,6 +6,7 @@ import processing.core.PImage;
 public class Stages 
 {
 	PImage stage1a, stage1b, stage1c, stage1d, stage1e, stage1f, stage1g, startScreen, insScreen, insScreen2, connectScreen;
+	PImage stage1ap2, stage1bp2, stage1cp2, stage1dp2, stage1ep2, stage1fp2, stage1gp2;
 	
 	public static int xStage, yStage;
 	
@@ -20,6 +21,14 @@ public class Stages
 		stage1e = app.loadImage("water5.png");
 		stage1f = app.loadImage("water6.png");
 		stage1g = app.loadImage("water7.png");
+		
+		stage1ap2 = app.loadImage("water1.png");
+		stage1bp2 = app.loadImage("water2.png");
+		stage1cp2 = app.loadImage("water3.png");
+		stage1dp2 = app.loadImage("water4.png");
+		stage1ep2 = app.loadImage("water5.png");
+		stage1fp2 = app.loadImage("water6.png");
+		stage1gp2 = app.loadImage("water7.png");
 		
 		startScreen = app.loadImage("startScreen.png");
 		insScreen = app.loadImage("instructionsOne.png");
@@ -63,6 +72,22 @@ public class Stages
 			break;
 		case 5:
 			
+			break;
+		}
+	}
+	
+	public void showStagePlayer2(PApplet app)
+	{
+		switch (stageNum)
+		{
+		case 4:
+			app.image(stage1a, xStage, yStage - 350);
+			app.image(stage1b, xStage + 1152, yStage - 350);
+			app.image(stage1c, xStage + (1152*2), yStage - 350);
+			app.image(stage1d, xStage + (1152*3), yStage - 350);
+			app.image(stage1e, xStage + (1152*4), yStage - 350);
+			app.image(stage1f, xStage + (1152*5), yStage - 350);
+			app.image(stage1g, xStage + (1152*6), yStage - 350);
 			break;
 		}
 	}

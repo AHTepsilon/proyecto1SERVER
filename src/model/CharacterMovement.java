@@ -165,6 +165,11 @@ public class CharacterMovement
 			
 			if(app.keyCode == app.UP && velocityY > 20)
 			{
+				velocityY = -25;
+			}
+			
+			/*if(app.keyCode == app.UP && velocityY > 20)
+			{
 				upKey = 1;
 				saltoBloqueado=false;
 				velocidadCaida=0;
@@ -205,7 +210,7 @@ public class CharacterMovement
 			if(app.keyCode == app.DOWN)
 			{
 				downKey = 1;
-			}
+			}*/
 		}
 	}
 	

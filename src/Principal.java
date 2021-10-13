@@ -73,6 +73,7 @@ public class Principal extends PApplet
 		stageLoader.stageCollisions(this);
 		charMove.drawPlayer(this, 0);
 		charMove.movement(this);
+		stageLoader.showStagePlayer2(this);
 		
 		gameOver();
 		moveStage();
