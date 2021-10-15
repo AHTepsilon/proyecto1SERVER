@@ -41,6 +41,8 @@ public class Principal extends PApplet
 	CharacterMovement charMove;
 	CharacterMovement2 charMove2;
 	
+	int msgNum;
+	
 	boolean gameOver;
 	
 	Stages stageLoader;
@@ -57,20 +59,21 @@ public class Principal extends PApplet
 			e.printStackTrace();
 		}
 		
-		initServer();
-		
 		stageLoader = new Stages(this);
 		charMove = new CharacterMovement(this);
 		charMove2 = new CharacterMovement2(this);
 		
 		stageLoader.stageNum = 0;
+		
+		
+		initServer();
 		}
 	
 	@Override
 	public void draw() //void Update
 	{		
 		background(255);
-		System.out.println(mouseX + ", " + mouseY + " / " + (int)stageLoader.xStage + ", " + (-(int)stageLoader.xStage + mouseX) + " / character1 pos: " + charMove.getPosX() + ", " + charMove.getPosY() + " / character2 pos: " + charMove2.getPosX() + ", " + charMove2.getPosY());
+		//System.out.println(mouseX + ", " + mouseY + " / " + (int)stageLoader.xStage + ", " + (-(int)stageLoader.xStage + mouseX) + " / character1 pos: " + charMove.getPosX() + ", " + charMove.getPosY() + " / character2 pos: " + charMove2.getPosX() + ", " + charMove2.getPosY());
 		//System.out.println(charMove.getVelocityY());
 		
 		stageLoader.showStage(this);
@@ -101,9 +104,9 @@ public class Principal extends PApplet
 				{
 					try {
 						ServerSocket server = new ServerSocket(4000);
-						System.out.println("Awaiting Connection...");
+						System.out.println("Awaiting connection...");
 						socket = server.accept();
-						System.out.println("Client Connected");
+						System.out.println("Client connected succesfully");
 						
 						InputStream is = socket.getInputStream();
 						InputStreamReader isr = new InputStreamReader(is);
@@ -113,6 +116,13 @@ public class Principal extends PApplet
 						OutputStreamWriter osw = new OutputStreamWriter(os);
 						writer = new BufferedWriter(osw);
 						
+						while(true)
+						{
+							System.out.println("Awaiting message...");
+							String line = reader.readLine();
+							System.out.println("Received message: " + line);
+						}
+						
 					} catch (IOException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
@@ -120,6 +130,22 @@ public class Principal extends PApplet
 					
 				}).start();
 	}
+	
+    public void sendMessage(String msg)
+    {
+        new Thread(
+                ()->
+                {
+                    try {
+                        writer.write(msg + "\n");
+                        writer.flush();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+        ).start();
+    }
 	
 	@SuppressWarnings("static-access")
 	public void keyReleased()
@@ -479,14 +505,14 @@ public class Principal extends PApplet
 		{
 			textSize(25);
 			fill(255);
-			text("Press Spacebar to Win!", 649, 467);
+			text("Press B to Win!", 649, 467);
 		}
 		
 		if(charMove2.getPosX() > 746 && charMove2.getPosY() == 622-350)
 		{
 			textSize(25);
 			fill(255);
-			text("Press Spacebar to Win!", 649, 467-350);
+			text("Press B to Win!", 649, 467-350);
 		}
 	}
 	

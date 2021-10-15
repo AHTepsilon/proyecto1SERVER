@@ -73,7 +73,10 @@ public class CharacterMovement2
 	{
 		app.fill(255, 0, 0);
 		
-		app.image(charSprite2, posX, posY);
+		if(Stages.stageNum == 4)
+		{
+			app.image(charSprite2, posX, posY);
+		}
 	}
 	
 	public void movement(PApplet app)

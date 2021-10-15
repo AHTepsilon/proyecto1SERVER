@@ -73,15 +73,19 @@ public class CharacterMovement
 	{
 		app.fill(255, 0, 0);
 		
-		switch(charId)
+		if(Stages.stageNum == 4)
 		{
-		case 0:
-			app.image(charSprite, posX, posY);
-			break;
-		case 1:
-			app.image(charSprite, posX-20, posY-20);
-			break;
+			switch(charId)
+			{
+			case 0:
+				app.image(charSprite, posX, posY);
+				break;
+			case 1:
+				app.image(charSprite, posX-20, posY-20);
+				break;
+			}
 		}
+
 	}
 	
 	public void movement(PApplet app)
