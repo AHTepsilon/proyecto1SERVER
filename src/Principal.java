@@ -150,8 +150,12 @@ public class Principal extends PApplet
 	@SuppressWarnings("static-access")
 	public void keyReleased()
 	{
-		charMove.keyMovement(this);
-		charMove2.keyMovement(this);
+		
+		if(Stages.stageNum == 4)
+		{	
+			charMove.keyMovement(this);
+			charMove2.keyMovement(this);
+		}
 		
 		if(key == '0')
 		{
@@ -187,8 +191,12 @@ public class Principal extends PApplet
 	
 	public void keyPressed()
 	{
-		charMove.keyPress(this);
-		charMove2.keyPress(this);
+
+		if(Stages.stageNum == 4)
+		{	
+			charMove.keyPress(this);
+			charMove2.keyPress(this);
+		}
 		
 		if(key == 'p' || key == 'P')
 		{
@@ -249,7 +257,7 @@ public class Principal extends PApplet
 	
 	public void positions()
 	{
-		if(charMove.posX + -stageLoader.xStage > charMove2.posX + -stageLoader.xStage2)
+		if(charMove.posX + -stageLoader.xStage > charMove2.posX + -stageLoader.xStage2 && Stages.stageNum == 4)
 		{
 			textSize(40);
 			
@@ -260,7 +268,7 @@ public class Principal extends PApplet
 			text("1", 1121, 40+350);
 		}
 		
-		else if(charMove2.posX + -stageLoader.xStage2 > charMove.posX + -stageLoader.xStage)
+		else if(charMove2.posX + -stageLoader.xStage2 > charMove.posX + -stageLoader.xStage && Stages.stageNum == 4)
 		{
 			textSize(40);
 			
@@ -491,7 +499,7 @@ public class Principal extends PApplet
 	
 	public void godMode()
 	{
-		if(godmode)
+		if(godmode && Stages.stageNum == 4)
 		{
 			textSize(15);
 			fill(255, 0, 0);
@@ -506,6 +514,14 @@ public class Principal extends PApplet
 			textSize(25);
 			fill(255);
 			text("Press B to Win!", 649, 467);
+			
+			if(keyPressed  && Stages.stageNum == 4)
+			{
+				if(key == 'B' || key == 'b')
+				{
+					Stages.stageNum = 5;
+				}
+			}
 		}
 		
 		if(charMove2.getPosX() > 746 && charMove2.getPosY() == 622-350)
@@ -513,6 +529,33 @@ public class Principal extends PApplet
 			textSize(25);
 			fill(255);
 			text("Press B to Win!", 649, 467-350);
+			
+			if(keyPressed  && Stages.stageNum == 4)
+			{
+				if(key == 'B' || key == 'b')
+				{
+					Stages.stageNum = 5;
+				}
+			}
+		}
+		
+		if(Stages.stageNum == 5)
+		{
+			if(charMove.posX + -stageLoader.xStage > charMove2.posX + -stageLoader.xStage2)
+			{
+				textSize(40);
+				
+				fill(0);
+				text("Player 1 Wins!!", 450, 350);
+			}
+			
+			if(charMove2.posX + -stageLoader.xStage2 > charMove.posX + -stageLoader.xStage)
+			{
+				textSize(40);
+				
+				fill(0);
+				text("Player 2 Wins!!", 450, 350);
+			}
 		}
 	}
 	
