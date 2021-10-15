@@ -157,6 +157,8 @@ public class Principal extends PApplet
 			charMove2.keyMovement(this);
 		}
 		
+		
+		//debug stage changer to quickly test stage changing
 		if(key == '0')
 		{
 			stageLoader.stageNum = 0;
@@ -257,6 +259,8 @@ public class Principal extends PApplet
 	
 	public void positions()
 	{
+		//controls the number that shows the position of the players regarding the other
+		
 		if(charMove.posX + -stageLoader.xStage > charMove2.posX + -stageLoader.xStage2 && Stages.stageNum == 4)
 		{
 			textSize(40);
@@ -283,6 +287,8 @@ public class Principal extends PApplet
 	@SuppressWarnings("static-access")
 	public void gameOver()
 	{
+		//Controls all the ways the game can land in a game over
+		
 		if(!godmode)
 		{
 			if(charMove.posY > 800)
@@ -499,6 +505,8 @@ public class Principal extends PApplet
 	
 	public void godMode()
 	{
+		//Activates godmode (DEBUG ONLY)
+		
 		if(godmode && Stages.stageNum == 4)
 		{
 			textSize(15);
@@ -509,6 +517,8 @@ public class Principal extends PApplet
 	
 	public void gameFinish()
 	{
+		//Finishes the game and shows the winning player
+		
 		if(charMove.getPosX() > 746 && charMove.getPosY() == 622)
 		{
 			textSize(25);

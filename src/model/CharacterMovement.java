@@ -71,6 +71,8 @@ public class CharacterMovement
 
 	public void drawPlayer(PApplet app, int charId)
 	{
+		//Draws the player sprite
+		
 		app.fill(255, 0, 0);
 		
 		if(Stages.stageNum == 4)
@@ -91,6 +93,8 @@ public class CharacterMovement
 	public void movement(PApplet app)
 	{
 		//System.out.println(velocityY);
+		
+		//Controls the player movement
 		
 		velocityY += gravity;
 		
@@ -123,6 +127,8 @@ public class CharacterMovement
 	@SuppressWarnings("static-access")
 	public void keyMovement(PApplet app) //goes in keyReleased
 	{
+		//Controls the movement by the keys
+		
 		if(app.key == app.CODED)
 		{
 			if(app.keyCode == app.LEFT)
@@ -150,6 +156,8 @@ public class CharacterMovement
 	@SuppressWarnings("static-access")
 	public void keyPress(PApplet app) //goes in keyPressed
 	{
+		//Controls the movement by the keys
+		
 		if(app.key == ' ' && onGround)
 		{
 			velocityY = jumpVel;

@@ -14,6 +14,8 @@ public class Stages
 	
 	public Stages(PApplet app)
 	{
+		//Loads the backgrounds for the game
+		
 		stage1a = app.loadImage("water1.png");
 		stage1b = app.loadImage("water2.png");
 		stage1c = app.loadImage("water3.png");
@@ -49,6 +51,7 @@ public class Stages
 	
 	public void showStage(PApplet app)
 	{
+		//loads the backgrounds depending on the number of the stage
 		
 		switch (stageNum)
 		{
@@ -81,6 +84,8 @@ public class Stages
 	
 	public void showStagePlayer2(PApplet app)
 	{
+		//loads the stage for the second player
+		
 		switch (stageNum)
 		{
 		case 4:
@@ -97,6 +102,9 @@ public class Stages
 	
 	public void stageCollisions(PApplet app)
 	{
+		
+		//controls the collisions for each player on the stage
+		
 		float CX = CharacterMovement.posX;
 		float CY = CharacterMovement.posY;
 		
