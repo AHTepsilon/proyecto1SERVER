@@ -29,6 +29,8 @@ public class Principal extends PApplet
 		size(1152, 700);
 	}
 	
+	public static boolean godmode;
+	
 	BufferedReader reader;
 	BufferedWriter writer;
 	
@@ -68,7 +70,7 @@ public class Principal extends PApplet
 	public void draw() //void Update
 	{		
 		background(255);
-		System.out.println(mouseX + ", " + mouseY + ", " + (int)stageLoader.xStage + ", " + (-(int)stageLoader.xStage + mouseX));
+		System.out.println(mouseX + ", " + mouseY + " / " + (int)stageLoader.xStage + ", " + (-(int)stageLoader.xStage + mouseX) + " / character1 pos: " + charMove.getPosX() + ", " + charMove.getPosY() + " / character2 pos: " + charMove2.getPosX() + ", " + charMove2.getPosY());
 		//System.out.println(charMove.getVelocityY());
 		
 		stageLoader.showStage(this);
@@ -86,6 +88,10 @@ public class Principal extends PApplet
 		
 		gameOver();
 		moveStage();
+		gameFinish();
+		
+		godMode();
+		
 	}
 	
 	public void initServer()
@@ -157,6 +163,11 @@ public class Principal extends PApplet
 	{
 		charMove.keyPress(this);
 		charMove2.keyPress(this);
+		
+		if(key == 'p' || key == 'P')
+		{
+			godmode = !godmode;
+		}
 	}
 	
 	@SuppressWarnings("static-access")
@@ -238,219 +249,246 @@ public class Principal extends PApplet
 	@SuppressWarnings("static-access")
 	public void gameOver()
 	{
-		
-		if(charMove.posY > 800)
+		if(!godmode)
 		{
-			stageLoader.xStage = 0;
-			charMove.posX = 31+10;
-			charMove.posY = 406;
+			if(charMove.posY > 800)
+			{
+				stageLoader.xStage = 0;
+				charMove.posX = 31+10;
+				charMove.posY = 406;
+			}
+			
+			if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 579, 566) < 30)
+			{
+				stageLoader.xStage = 0;
+				charMove.posX = 31+10;
+				charMove.posY = 406;
+			}
+			if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 683, 630) < 30)
+			{
+				stageLoader.xStage = 0;
+				charMove.posX = 31+10;
+				charMove.posY = 406;
+			}
+			if(dist(charMove.posX, charMove.posY, stageLoader.xStage +1600, 653) < 10)
+			{
+				stageLoader.xStage = 0;
+				charMove.posX = 31+10;
+				charMove.posY = 406;
+			}
+			if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 1662, 593) < 30)
+			{
+				stageLoader.xStage = 0;
+				charMove.posX = 31;
+				charMove.posY = 406;
+			}
+			if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 2639, 478) < 40)
+			{
+				stageLoader.xStage = 0;
+				charMove.posX = 31;
+				charMove.posY = 406;
+			}
+			if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 2756, 478) < 40)
+			{
+				stageLoader.xStage = 0;
+				charMove.posX = 31;
+				charMove.posY = 406;
+			}
+			if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 2915, 644) < 40)
+			{
+				stageLoader.xStage = 0;
+				charMove.posX = 31;
+				charMove.posY = 406;
+			}
+			if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 3090, 644) < 40)
+			{
+				stageLoader.xStage = 0;
+				charMove.posX = 31;
+				charMove.posY = 406;
+			}
+			if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 4069, 644) < 40)
+			{
+				stageLoader.xStage = 0;
+				charMove.posX = 31;
+				charMove.posY = 406;
+			}
+			if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 4287, 555) < 40)
+			{
+				stageLoader.xStage = 0;
+				charMove.posX = 31+10;
+				charMove.posY = 406;
+			}
+			if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 5009, 571) < 40)
+			{
+				stageLoader.xStage = 0;
+				charMove.posX = 31+10;
+				charMove.posY = 406;
+			}
+			if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 5672, 571) < 40)
+			{
+				stageLoader.xStage = 0;
+				charMove.posX = 31+10;
+				charMove.posY = 406;
+			}
+			if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 5939, 639) < 40)
+			{
+				stageLoader.xStage = 0;
+				charMove.posX = 31+10;
+				charMove.posY = 406;
+			}
+			if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 6084, 639) < 40)
+			{
+				stageLoader.xStage = 0;
+				charMove.posX = 31+10;
+				charMove.posY = 406;
+			}
+			if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 6403, 639) < 40)
+			{
+				stageLoader.xStage = 0;
+				charMove.posX = 31+10;
+				charMove.posY = 406;
+			}
+			if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 6703, 571) < 40)
+			{
+				stageLoader.xStage = 0;
+				charMove.posX = 31+10;
+				charMove.posY = 406;
+			}
+			
+			//------------------------------------------------------------------------------------------------------------------------------------
+			
+			if(charMove2.posY > 800 - 350)
+			{
+				stageLoader.xStage2 = 0;
+				charMove2.posX = 31+10;
+				charMove2.posY = 406-350;
+			}
+			
+			if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 579, 566-350) < 30)
+			{
+				stageLoader.xStage2 = 0;
+				charMove2.posX = 31+10;
+				charMove2.posY = 406-350;
+			}
+			if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 683, 630-350) < 30)
+			{
+				stageLoader.xStage2 = 0;
+				charMove2.posX = 31+10;
+				charMove2.posY = 406-350;
+			}
+			if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 +1600, 653-350) < 10)
+			{
+				stageLoader.xStage2 = 0;
+				charMove2.posX = 31+10;
+				charMove2.posY = 406-350;
+			}
+			if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 1662, 593-350) < 30)
+			{
+				stageLoader.xStage2 = 0;
+				charMove2.posX = 31;
+				charMove2.posY = 406-350;
+			}
+			if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 2639, 478-350) < 40)
+			{
+				stageLoader.xStage2 = 0;
+				charMove2.posX = 31;
+				charMove2.posY = 406-350;
+			}
+			if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 2756, 478-350) < 40)
+			{
+				stageLoader.xStage2 = 0;
+				charMove2.posX = 31;
+				charMove2.posY = 406-350;
+			}
+			if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 2915, 644-350) < 40)
+			{
+				stageLoader.xStage2 = 0;
+				charMove2.posX = 31;
+				charMove2.posY = 406-350;
+			}
+			if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 3090, 644-350) < 40)
+			{
+				stageLoader.xStage2 = 0;
+				charMove2.posX = 31;
+				charMove2.posY = 406-350;
+			}
+			if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 4069, 644-350) < 40)
+			{
+				stageLoader.xStage2 = 0;
+				charMove2.posX = 31;
+				charMove2.posY = 406-350;
+			}
+			if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 4287, 555-350) < 40)
+			{
+				stageLoader.xStage2 = 0;
+				charMove2.posX = 31+10;
+				charMove2.posY = 406-350;
+			}
+			if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 5009, 571-350) < 40)
+			{
+				stageLoader.xStage2 = 0;
+				charMove2.posX = 31+10;
+				charMove2.posY = 406-350;
+			}
+			if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 5672, 571-350) < 40)
+			{
+				stageLoader.xStage2 = 0;
+				charMove2.posX = 31+10;
+				charMove2.posY = 406-350;
+			}
+			if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 5939, 639-350) < 40)
+			{
+				stageLoader.xStage2 = 0;
+				charMove2.posX = 31+10;
+				charMove2.posY = 406-350;
+			}
+			if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 6084, 639-350) < 40)
+			{
+				stageLoader.xStage2 = 0;
+				charMove2.posX = 31+10;
+				charMove2.posY = 406-350;
+			}
+			if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 6403, 639-350) < 40)
+			{
+				stageLoader.xStage2 = 0;
+				charMove2.posX = 31+10;
+				charMove2.posY = 406-350;
+			}
+			if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 6703, 571-350) < 40)
+			{
+				stageLoader.xStage2 = 0;
+				charMove2.posX = 31+10;
+				charMove2.posY = 406-350;
+			}
 		}
-		
-		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 579, 566) < 30)
-		{
-			stageLoader.xStage = 0;
-			charMove.posX = 31+10;
-			charMove.posY = 406;
-		}
-		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 683, 630) < 30)
-		{
-			stageLoader.xStage = 0;
-			charMove.posX = 31+10;
-			charMove.posY = 406;
-		}
-		if(dist(charMove.posX, charMove.posY, stageLoader.xStage +1600, 653) < 10)
-		{
-			stageLoader.xStage = 0;
-			charMove.posX = 31+10;
-			charMove.posY = 406;
-		}
-		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 1662, 593) < 30)
-		{
-			stageLoader.xStage = 0;
-			charMove.posX = 31;
-			charMove.posY = 406;
-		}
-		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 2639, 478) < 40)
-		{
-			stageLoader.xStage = 0;
-			charMove.posX = 31;
-			charMove.posY = 406;
-		}
-		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 2756, 478) < 40)
-		{
-			stageLoader.xStage = 0;
-			charMove.posX = 31;
-			charMove.posY = 406;
-		}
-		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 2915, 644) < 40)
-		{
-			stageLoader.xStage = 0;
-			charMove.posX = 31;
-			charMove.posY = 406;
-		}
-		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 3090, 644) < 40)
-		{
-			stageLoader.xStage = 0;
-			charMove.posX = 31;
-			charMove.posY = 406;
-		}
-		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 4069, 644) < 40)
-		{
-			stageLoader.xStage = 0;
-			charMove.posX = 31;
-			charMove.posY = 406;
-		}
-		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 4287, 555) < 40)
-		{
-			stageLoader.xStage = 0;
-			charMove.posX = 31+10;
-			charMove.posY = 406;
-		}
-		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 5009, 571) < 40)
-		{
-			stageLoader.xStage = 0;
-			charMove.posX = 31+10;
-			charMove.posY = 406;
-		}
-		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 5672, 571) < 40)
-		{
-			stageLoader.xStage = 0;
-			charMove.posX = 31+10;
-			charMove.posY = 406;
-		}
-		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 5939, 639) < 40)
-		{
-			stageLoader.xStage = 0;
-			charMove.posX = 31+10;
-			charMove.posY = 406;
-		}
-		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 6084, 639) < 40)
-		{
-			stageLoader.xStage = 0;
-			charMove.posX = 31+10;
-			charMove.posY = 406;
-		}
-		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 6403, 639) < 40)
-		{
-			stageLoader.xStage = 0;
-			charMove.posX = 31+10;
-			charMove.posY = 406;
-		}
-		if(dist(charMove.posX, charMove.posY, stageLoader.xStage + 6703, 571) < 40)
-		{
-			stageLoader.xStage = 0;
-			charMove.posX = 31+10;
-			charMove.posY = 406;
-		}
-		
-		//------------------------------------------------------------------------------------------------------------------------------------
-		
-		if(charMove2.posY > 800 - 350)
-		{
-			stageLoader.xStage2 = 0;
-			charMove2.posX = 31+10;
-			charMove2.posY = 406-350;
-		}
-		
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 579, 566-350) < 30)
-		{
-			stageLoader.xStage2 = 0;
-			charMove2.posX = 31+10;
-			charMove2.posY = 406-350;
-		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 683, 630-350) < 30)
-		{
-			stageLoader.xStage2 = 0;
-			charMove2.posX = 31+10;
-			charMove2.posY = 406-350;
-		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 +1600, 653-350) < 10)
-		{
-			stageLoader.xStage2 = 0;
-			charMove2.posX = 31+10;
-			charMove2.posY = 406-350;
-		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 1662, 593-350) < 30)
-		{
-			stageLoader.xStage2 = 0;
-			charMove2.posX = 31;
-			charMove2.posY = 406-350;
-		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 2639, 478-350) < 40)
-		{
-			stageLoader.xStage2 = 0;
-			charMove2.posX = 31;
-			charMove2.posY = 406-350;
-		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 2756, 478-350) < 40)
-		{
-			stageLoader.xStage2 = 0;
-			charMove2.posX = 31;
-			charMove2.posY = 406-350;
-		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 2915, 644-350) < 40)
-		{
-			stageLoader.xStage2 = 0;
-			charMove2.posX = 31;
-			charMove2.posY = 406-350;
-		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 3090, 644-350) < 40)
-		{
-			stageLoader.xStage2 = 0;
-			charMove2.posX = 31;
-			charMove2.posY = 406-350;
-		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 4069, 644-350) < 40)
-		{
-			stageLoader.xStage2 = 0;
-			charMove2.posX = 31;
-			charMove2.posY = 406-350;
-		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 4287, 555-350) < 40)
-		{
-			stageLoader.xStage2 = 0;
-			charMove2.posX = 31+10;
-			charMove2.posY = 406-350;
-		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 5009, 571-350) < 40)
-		{
-			stageLoader.xStage2 = 0;
-			charMove2.posX = 31+10;
-			charMove2.posY = 406-350;
-		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 5672, 571-350) < 40)
-		{
-			stageLoader.xStage2 = 0;
-			charMove2.posX = 31+10;
-			charMove2.posY = 406-350;
-		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 5939, 639-350) < 40)
-		{
-			stageLoader.xStage2 = 0;
-			charMove2.posX = 31+10;
-			charMove2.posY = 406-350;
-		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 6084, 639-350) < 40)
-		{
-			stageLoader.xStage2 = 0;
-			charMove2.posX = 31+10;
-			charMove2.posY = 406-350;
-		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 6403, 639-350) < 40)
-		{
-			stageLoader.xStage2 = 0;
-			charMove2.posX = 31+10;
-			charMove2.posY = 406-350;
-		}
-		if(dist(charMove2.posX, charMove2.posY, stageLoader.xStage2 + 6703, 571-350) < 40)
-		{
-			stageLoader.xStage2 = 0;
-			charMove2.posX = 31+10;
-			charMove2.posY = 406-350;
-		}
-		
 	}
 	
+	public void godMode()
+	{
+		if(godmode)
+		{
+			textSize(15);
+			fill(255, 0, 0);
+			text("Godmode on", 5, 372);
+		}
+	}
+	
+	public void gameFinish()
+	{
+		if(charMove.getPosX() > 746 && charMove.getPosY() == 622)
+		{
+			textSize(25);
+			fill(255);
+			text("Press Spacebar to Win!", 649, 467);
+		}
+		
+		if(charMove2.getPosX() > 746 && charMove2.getPosY() == 622-350)
+		{
+			textSize(25);
+			fill(255);
+			text("Press Spacebar to Win!", 649, 467-350);
+		}
+	}
 	
 
 }

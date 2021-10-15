@@ -73,7 +73,7 @@ public class CharacterMovement2
 	{
 		app.fill(255, 0, 0);
 		
-		app.image(charSprite2, posX-20, posY);
+		app.image(charSprite2, posX, posY);
 	}
 	
 	public void movement(PApplet app)

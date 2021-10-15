@@ -837,25 +837,25 @@ public class Stages
 	
 	if(CharacterMovement2.posX > (xStage2 + 4812) && CharacterMovement2.posX < (xStage2 + 4896))
 	{
-		if(CharacterMovement2.posY > 639-45)
+		if(CharacterMovement2.posY > 639-45-350)
 		{
-			CharacterMovement2.posY = 639-45;
+			CharacterMovement2.posY = 639-45-350;
 		}
 	}
 	
 	if(CharacterMovement2.posX > (xStage2 + 4896) && CharacterMovement2.posX < (xStage2 + 5115))
 	{
-		if(CharacterMovement2.posY > 569-45)
+		if(CharacterMovement2.posY > 569-45-350)
 		{
-			CharacterMovement2.posY = 569-45;
+			CharacterMovement2.posY = 569-45-350;
 		}
 	}
 	
 	if(CharacterMovement2.posX > (xStage2 + 5137) && CharacterMovement2.posX < (xStage2 + 5234))
 	{
-		if(CharacterMovement2.posY > 515-45)
+		if(CharacterMovement2.posY > 515-45-350)
 		{
-			CharacterMovement2.posY = 515-45;
+			CharacterMovement2.posY = 515-45-350;
 		}
 	}
 	
