@@ -15,6 +15,7 @@ import model.CharacterMovement2;
 import model.Connection;
 import model.Stages;
 import processing.core.PApplet;
+import processing.core.PImage;
 
 public class Principal extends PApplet
 {
@@ -44,6 +45,7 @@ public class Principal extends PApplet
 	
 	CharacterMovement charMove;
 	CharacterMovement2 charMove2;
+	PImage winStage1, winStage2;
 	
 	int msgNum;
 	
@@ -72,6 +74,9 @@ public class Principal extends PApplet
 		TCPServer = new Connection();
 		
 		TCPServer.initServer();
+		
+		winStage1 = loadImage("winningFrame1.png");
+		winStage2 = loadImage("winningFrame2.png");
 		
 		//initServer();
 		}
@@ -491,24 +496,19 @@ public class Principal extends PApplet
 			if(charMove.posX + -stageLoader.xStage > charMove2.posX + -stageLoader.xStage2)
 			{
 				textSize(40);
+				image(winStage1, 0, 0);
 				
 				fill(0);
-				text("Player 1 Wins!!", 450, 350);
 			}
 			
 			if(charMove2.posX + -stageLoader.xStage2 > charMove.posX + -stageLoader.xStage)
 			{
 				textSize(40);
+				image(winStage2, 0, 0);
 				
 				fill(0);
-				text("Player 2 Wins!!", 450, 350);
 			}
 		}
-	}
-	
-	public void mousePressed()
-	{
-		
 	}
 	
 

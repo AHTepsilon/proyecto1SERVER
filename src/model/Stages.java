@@ -77,7 +77,6 @@ public class Stages
 			app.image(stage1g, xStage + (1152*6), yStage);
 			break;
 		case 5:
-			
 			break;
 		}
 	}
