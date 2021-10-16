@@ -42,9 +42,10 @@ public class Connection
 						OutputStreamWriter osw = new OutputStreamWriter(os);
 						writer = new BufferedWriter(osw);
 						
+						sendMessage("Controller Connected Succesfully");
+						
 						while (true)
 						{
-							sendMessage("Controller Connected Succesfully");
 							System.out.println("Awaiting message...");
 							String line = reader.readLine();
 							System.out.println("Received message: " + line);
