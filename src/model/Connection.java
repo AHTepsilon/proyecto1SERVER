@@ -44,6 +44,7 @@ public class Connection
 						
 						while (true)
 						{
+							sendMessage("Controller Connected Succesfully");
 							System.out.println("Awaiting message...");
 							String line = reader.readLine();
 							System.out.println("Received message: " + line);

@@ -104,56 +104,6 @@ public class Principal extends PApplet
 		
 	}
 	
-	/*public void initServer()
-	{
-		new Thread(
-				() -> 
-				{
-					try {
-						ServerSocket server = new ServerSocket(4000);
-						System.out.println("Awaiting connection...");
-						socket = server.accept();
-						System.out.println("Client connected succesfully");
-						
-						InputStream is = socket.getInputStream();
-						InputStreamReader isr = new InputStreamReader(is);
-						reader = new BufferedReader(isr);
-						
-						OutputStream os = socket.getOutputStream();
-						OutputStreamWriter osw = new OutputStreamWriter(os);
-						writer = new BufferedWriter(osw);
-						
-						while (true)
-						{
-							System.out.println("Awaiting message...");
-							String line = reader.readLine();
-							System.out.println("Received message: " + line);
-						}
-						
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-					
-				}).start();
-	}*/
-	
-    /*public void sendMessage(String msg)
-    {
-        new Thread(
-                ()->
-                {
-                    try {
-                        writer.write(msg + "\n");
-                        writer.flush();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-
-                }
-        ).start();
-    }*/
-	
 	@SuppressWarnings("static-access")
 	public void keyReleased()
 	{
@@ -554,6 +504,11 @@ public class Principal extends PApplet
 				text("Player 2 Wins!!", 450, 350);
 			}
 		}
+	}
+	
+	public void mousePressed()
+	{
+		
 	}
 	
 
