@@ -12,6 +12,7 @@ import java.net.UnknownHostException;
 
 import model.CharacterMovement;
 import model.CharacterMovement2;
+import model.Connection;
 import model.Stages;
 import processing.core.PApplet;
 
@@ -31,10 +32,13 @@ public class Principal extends PApplet
 	
 	public static boolean godmode;
 	
-	BufferedReader reader;
+	/*BufferedReader reader;
 	BufferedWriter writer;
 	
 	private Socket socket;
+	*/
+	
+	Connection TCPServer;
 	
 	InetAddress ipServer;
 	
@@ -65,8 +69,11 @@ public class Principal extends PApplet
 		
 		stageLoader.stageNum = 0;
 		
+		TCPServer = new Connection();
 		
-		initServer();
+		TCPServer.initServer();
+		
+		//initServer();
 		}
 	
 	@Override
@@ -97,7 +104,7 @@ public class Principal extends PApplet
 		
 	}
 	
-	public void initServer()
+	/*public void initServer()
 	{
 		new Thread(
 				() -> 
@@ -116,7 +123,7 @@ public class Principal extends PApplet
 						OutputStreamWriter osw = new OutputStreamWriter(os);
 						writer = new BufferedWriter(osw);
 						
-						while(true)
+						while (true)
 						{
 							System.out.println("Awaiting message...");
 							String line = reader.readLine();
@@ -129,9 +136,9 @@ public class Principal extends PApplet
 					}
 					
 				}).start();
-	}
+	}*/
 	
-    public void sendMessage(String msg)
+    /*public void sendMessage(String msg)
     {
         new Thread(
                 ()->
@@ -145,7 +152,7 @@ public class Principal extends PApplet
 
                 }
         ).start();
-    }
+    }*/
 	
 	@SuppressWarnings("static-access")
 	public void keyReleased()
@@ -213,44 +220,24 @@ public class Principal extends PApplet
 		{
 			charMove.setPosX(800);
 			stageLoader.xStage -= 5;
-			
-			/*if(stageLoader.xStage > 0)
-			{
-				stageLoader.xStage = 0;
-			}*/
 		}
 		
 		if(charMove.getPosX() < 24)
 		{
 			charMove.setPosX(25);
 			stageLoader.xStage += 5;
-			
-			/*if(stageLoader.xStage < 1152 * 8)
-			{
-				stageLoader.xStage = (1152 * 8)-1;
-			}*/
 		}
 		
 		if(charMove2.getPosX() > 801)
 		{
 			charMove2.setPosX(800);
 			stageLoader.xStage2 -= 5;
-			
-			/*if(stageLoader.xStage > 0)
-			{
-				stageLoader.xStage = 0;
-			}*/
 		}
 		
 		if(charMove2.getPosX() < 24)
 		{
 			charMove2.setPosX(25);
 			stageLoader.xStage2 += 5;
-			
-			/*if(stageLoader.xStage < 1152 * 8)
-			{
-				stageLoader.xStage = (1152 * 8)-1;
-			}*/
 		}
 		
 		//System.out.println(charMove.getPosX());
