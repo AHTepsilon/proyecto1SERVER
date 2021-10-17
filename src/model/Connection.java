@@ -57,6 +57,46 @@ public class Connection
 							
 							msgNum = Integer.parseInt(line);
 							
+							if(connectedControllers == 1)
+							{
+								if(Stages.stageNum == 0)
+								{
+									if(msgNum == 5)
+									{
+										Stages.stageNum = 1;
+										msgNum = 0;
+									}
+								}
+								
+								if(Stages.stageNum == 1)
+								{
+									if(msgNum == 5)
+									{
+										Stages.stageNum = 2;
+										msgNum = 0;
+									}
+								}
+								
+								if(Stages.stageNum == 2)
+								{
+									if(msgNum == 5)
+									{
+										Stages.stageNum = 3;
+										msgNum = 0;
+									}
+								}
+								
+								if(Stages.stageNum == 3)
+								{
+									if(msgNum == 5)
+									{
+										Stages.stageNum = 4;
+										msgNum = 0;
+									}
+								}
+							}
+								
+							
 							if(connectedControllers == 1 && Stages.stageNum == 4)
 							{
 								if(msgNum == 0)
