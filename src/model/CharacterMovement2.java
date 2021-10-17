@@ -7,7 +7,7 @@ public class CharacterMovement2
 {
 
 	public static float posX, posY;
-	float velocityX, velocityY;
+	public static float velocityX, velocityY;
 	float speed;
 	float jumpVel;
 	double gravity;
@@ -17,7 +17,7 @@ public class CharacterMovement2
 	
 	int size;
 	
-	float upKey, leftKey, rightKey, downKey;
+	public static float upKey, leftKey, rightKey, downKey;
 	
 	boolean subiendo,saltoBloqueado, colisionAbajo;
 	int saltoYinicial, frameAereosMaximos, framesAereos, velocidadY, velocidadMovimiento;

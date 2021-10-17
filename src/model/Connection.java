@@ -18,6 +18,9 @@ public class Connection
 	
 	private Socket socket;
 	
+	int msgNum;
+	int connectedControllers;
+	
 	public Connection()
 	{
 		
@@ -44,11 +47,77 @@ public class Connection
 						
 						sendMessage("Controller Connected Succesfully");
 						
+						connectedControllers++;
+						
 						while (true)
 						{
 							System.out.println("Awaiting message...");
 							String line = reader.readLine();
 							System.out.println("Received message: " + line);
+							
+							msgNum = Integer.parseInt(line);
+							
+							if(connectedControllers == 1 && Stages.stageNum == 4)
+							{
+								if(msgNum == 0)
+								{
+									CharacterMovement.leftKey = 0;
+									CharacterMovement.rightKey = 0;
+								}
+								if(msgNum == 1  && CharacterMovement.velocityY > 20)
+								{
+									CharacterMovement.velocityY = -25;
+								}
+								
+								if(msgNum == 2 && CharacterMovement.getPosX() > 746 && CharacterMovement.getPosY() == 622)
+								{
+									Stages.stageNum = 5;
+								}
+								
+								if(msgNum == 3)
+								{
+									CharacterMovement.leftKey = 1;
+									CharacterMovement.rightKey = 0;
+								}
+								
+								if(msgNum == 4)
+								{
+									CharacterMovement.leftKey = 0;
+									CharacterMovement.rightKey = 1;
+								}
+							}
+							
+							if(connectedControllers == 2 && Stages.stageNum == 4)
+							{
+								if(msgNum == 0)
+								{
+									CharacterMovement2.leftKey = 0;
+									CharacterMovement2.rightKey = 0;
+								}
+								
+								if(msgNum == 1  && CharacterMovement2.velocityY > 20)
+								{
+									CharacterMovement2.velocityY = -25;
+								}
+								
+								if(msgNum == 2 && CharacterMovement2.getPosX() > 746 && CharacterMovement2.getPosY() == 622-350)
+								{
+									Stages.stageNum = 5;
+								}
+								
+								if(msgNum == 3)
+								{
+									CharacterMovement2.leftKey = 1;
+									CharacterMovement2.rightKey = 0;
+								}
+								
+								if(msgNum == 4)
+								{
+									CharacterMovement2.leftKey = 0;
+									CharacterMovement2.rightKey = 1;
+								}
+							}
+
 						}
 						
 					} catch (IOException e) {
