@@ -1,3 +1,4 @@
+package main;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -17,12 +18,12 @@ import model.Stages;
 import processing.core.PApplet;
 import processing.core.PImage;
 
-public class Principal extends PApplet
+public class Main extends PApplet
 {
 
 	public static void main(String[] args) 
 	{
-		PApplet.main("Principal");
+		PApplet.main("main.Main");
 	}
 	
 	@Override
@@ -71,9 +72,9 @@ public class Principal extends PApplet
 		
 		stageLoader.stageNum = 0;
 		
-		TCPServer = new Connection();
-		
-		TCPServer.initServer();
+		TCPServer = Connection.getInstance();
+		TCPServer.setServer(this);
+		TCPServer.start();
 		
 		winStage1 = loadImage("winningFrame1.png");
 		winStage2 = loadImage("winningFrame2.png");
