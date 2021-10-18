@@ -20,6 +20,8 @@ public class Session extends Thread
 
 	int msgNum;
 	
+	int sessionNum;
+	
 	Main observer;
 	
 	public Session(Socket socket, int CC)
@@ -47,6 +49,8 @@ public class Session extends Thread
 			writer = new BufferedWriter(osw);
 			
 			sendMessage("Controller Connected Succesfully");
+			
+			sessionNum = Connection.connectedControllers;
 			
 			while (true)
 			{
@@ -95,7 +99,7 @@ public class Session extends Thread
 				
 					
 				
-				if(Connection.connectedControllers == 1 && Stages.stageNum == 4)
+				if(sessionNum == 1 && Stages.stageNum == 4)
 				{
 					if(msgNum == 0)
 					{
@@ -125,7 +129,7 @@ public class Session extends Thread
 					}
 				}
 				
-				if(Connection.connectedControllers == 2 && Stages.stageNum == 4)
+				if(sessionNum == 2 && Stages.stageNum == 4)
 				{
 					if(msgNum == 0)
 					{
